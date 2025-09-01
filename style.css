@@ -1,0 +1,186 @@
+/* Importando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding-top: 60px; /* Para acomodar a navegação fixa */
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #8a2be2; /* Lilás */
+    color: #fff;
+    text-align: center;
+    padding: 3em 0;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+}
+
+nav {
+    background-color: #6a0dad; /* Lilás mais escuro */
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav li a:hover {
+    background-color: #7b29d4;
+}
+
+main {
+    padding: 2em 0;
+}
+
+section {
+    background-color: #fff;
+    margin-bottom: 2em;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #8a2be2;
+    border-bottom: 2px solid #8a2be2;
+    padding-bottom: 0.5em;
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Animação para as seções */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animado {
+    animation: slideInFromLeft 0.8s ease-out;
+}
+
+/* Estilo para os cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    color: #6a0dad;
+    border-bottom: 2px solid #6a0dad;
+    padding-bottom: 5px;
+}
+
+/* Estilo para a galeria */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para o depoimento */
+.testimonial {
+    background-color: #f0f0f5;
+    border-left: 5px solid #8a2be2;
+    padding: 20px;
+    border-radius: 4px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    font-style: normal;
+    color: #555;
+}
+
+/* Estilo para a caixa de denúncia */
+.denuncia-box {
+    background-color: #e6e6fa;
+    border: 2px solid #8a2be2;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #6a0dad;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 0;
+}
